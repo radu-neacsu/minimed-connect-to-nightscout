@@ -106,3 +106,4 @@ This project is intended for educational and informational purposes only. It rel
 [run.js]: https://github.com/nightscout/minimed-connect-to-nightscout/blob/master/run.js
 [File an issue]: https://github.com/nightscout/minimed-connect-to-nightscout/issues
 [mmcsv]: https://github.com/bewest/mmcsv
+[Docker]: https://docs.docker.com/get-docker/
