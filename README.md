@@ -25,14 +25,14 @@ Another turnkey installation option is to run this on a Heroku worker dyno. You 
 
 ## Installation in general
 
-1. Install [Node].
+1. Install [Docker].
 1. Clone this repository.
-1. `npm install` to install dependencies.
 1. Set environment variables (see below).
-1. `npm start` and leave it running.
+1. run `docker-compose up -d`.
 
 ### Required environment variables
 
+Copy .env.sample as .env and replace the <<palce-holders>> with correct information
 * `CARELINK_USERNAME` - your username for [CareLink][carelink]
 * `CARELINK_PASSWORD` - your password for [CareLink][carelink]
 * `API_SECRET` - the value you use for `API_SECRET` on your Nightscout website
@@ -46,6 +46,12 @@ Another turnkey installation option is to run this on a Heroku worker dyno. You 
 * `CARELINK_QUIET` - set to a truthy value to not output details of CareLink and Nightscout requests to the console (default: empty)
 * `MMCONNECT_SERVER` - set to `EU` if you are based in Europe / using Guardian Connect
 * `NS` - a fully-qualified Nightscout URL (e.g. `https://sitename.azurewebsites.net`) which overrides `WEBSITE_HOSTNAME`
+
+## Restarting container
+
+1. run `docker-compose down`
+1. run `docker-compose up -d --build`
+
 
 ## Currently supported data
 
